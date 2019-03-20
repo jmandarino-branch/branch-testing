@@ -11,9 +11,31 @@
 	});
 
 
-	window.open("https://raptors.app/XyhEsQDE3U","_self")
+	//window.open("https://raptors.app/XyhEsQDE3U","_self")
     function testFire(){
-      window.open("https://audiomack.app.link/download","_self")
+	   branch.sendSMS(
+    '5166528691',
+    {
+        tags: ['tag1', 'tag2'],
+        channel: 'facebook',
+        feature: 'dashboard',
+        stage: 'new user',
+        data: {
+            mydata: 'something',
+            foo: 'bar',
+            '$desktop_url': 'http://myappwebsite.com',
+            '$ios_url': 'http://myappwebsite.com/ios',
+            '$ipad_url': 'http://myappwebsite.com/ipad',
+            '$android_url': 'http://myappwebsite.com/android',
+            '$og_app_id': '12345',
+            '$og_title': 'My App',
+            '$og_description': 'My app\'s description.',
+            '$og_image_url': 'http://myappwebsite.com/image.png'
+        }
+    },
+    { make_new_link: true }, // Default: false. If set to true, sendSMS will generate a new link even if one already exists.
+    function(err) { console.log(err); }
+);
     }
 </script>
 
