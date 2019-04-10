@@ -10,8 +10,16 @@
 
 
 	branch.setIdenity('asdfasdfasdfasdfasdf');
+
+
     	// callback to handle err or data
 	});
+
+branch.logEvent(
+     "custom_event",
+     { metadata: '123' },
+     function(err) { console.log(err); }
+);
 	
 </script>
 
